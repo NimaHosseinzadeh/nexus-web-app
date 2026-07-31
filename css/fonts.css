@@ -1,0 +1,38 @@
+/* ==================== 2. FONTS ==================== */
+/* --- Nunito Font --- */
+@font-face {
+    font-family: 'Nunito';
+    src: url('../fonts/Nunito-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('../fonts/Nunito-Medium.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('../fonts/Nunito-Bold.ttf');
+    font-weight: 700;
+}
+
+/* --- Dana Font --- */
+@font-face {
+    font-family: 'Dana';
+    src: url('../fonts/DanaFaNum-Regular.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Dana';
+    src: url('../fonts/DanaFaNum-Medium.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Dana';
+    src: url('../fonts/DanaFaNum-Bold.ttf');
+    font-weight: 700;
+}

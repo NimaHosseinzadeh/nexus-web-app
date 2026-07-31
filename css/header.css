@@ -1,0 +1,180 @@
+/* ==================== 3. BODY & LAYOUT ==================== */
+body {
+    background-color: #E5E5E5;
+    font-family: 'Nunito', 'Dana', sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 1.25rem 1.5rem;
+}
+
+/* ==================== 4. HEADER ==================== */
+.header {
+    background-color: #FFFFFF;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* --- Primary Section (Brand & Nav) --- */
+.header__primary {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.header__menu {
+    display: flex;
+    gap: 2rem;
+    font-weight: 700;
+}
+
+.header__menu-link {
+    color: #485466;
+    transition: color .3s ease;
+}
+
+.header__menu-item{
+    position: relative;
+}
+
+.header__menu-item::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 100%;
+    height: 3px;
+    background-color: #4E92F9;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .3s ease;
+}
+
+.header__menu-item:hover::after {
+    transform: scaleX(1);
+}
+
+/* --- Secondary Section (Utility & Auth) --- */
+.header__secondary {
+    display: flex;
+    gap: 1rem;
+}
+
+.header__utility {
+    display: flex;
+    gap: 0.2rem;
+    align-items: center;
+}
+
+.header__util-btn {
+    font-size: 1.1rem;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: transform .3s ease, background-color .3s ease;
+    color: #485466;
+}
+
+.header__util-btn:hover {
+    transform: translateY(-2px);
+    background-color: #e2e2e3;
+}
+
+.ri-arrow-down-s-line {
+    font-weight: 400;
+}
+
+/* ==================== 5. BUTTONS & AUTH ==================== */
+.btn {
+    font-weight: 700;
+}
+
+.header__auth {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn--login {
+    color: #4E92F9;
+    padding: 7px 16px;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: background-color .3s ease, color .3s ease;
+    width: 4.88rem;
+}
+
+.btn--login:hover {
+    background-color: #4E92F9;
+    color: #FFFFFF;
+}
+
+.btn--signup {
+    background: linear-gradient(to right, #C381DB, #4E92F9);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: #FFFFFF;
+    box-shadow: 0 7px 20px 0 rgba(49, 69, 255, 0.13);
+    width: 91px;
+    transition: transform .3s ease, box-shadow .3s ease;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.btn--signup:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(49, 69, 255, .18);
+}
+
+/* ==================== 6. SUBMENU / DROPDOWN ==================== */
+.header__dropdown-icon {
+    font-size: 1.1rem;
+    display: inline-block;
+    transition: transform .3s ease;
+}
+
+.header__menu-item--has-dropdown:hover .header__dropdown-icon {
+    transform: rotate(180deg);
+}
+
+.header__dropdown{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 170px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 0.5rem 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    z-index: 100;
+    display: none;
+    transform: translateY(15px);
+    transition: opacity .3s ease, transform .3s ease, visibility .3s;
+}
+
+.header__menu-item--has-dropdown:hover .header__dropdown{
+    display: block;
+    transform: translateY(8px);
+}
+
+.header__dropdown-item{padding: 8px;}
+
+.header__dropdown-link{
+    padding: 0.6rem 1rem;
+    display: block;
+    font-weight: 400;
+    border-radius: 8px;
+    transition: background-color .2s ease, color .2s ease;
+}
+
+.header__dropdown-link:hover{
+    background: #f5f7ff;
+    color: #4F46E5;
+}
