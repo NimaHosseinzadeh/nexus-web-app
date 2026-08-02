@@ -126,6 +126,7 @@
     /* ================= Dark Mode for Mobile Nav ================= */
     body.dark .header {
         background-color: #0f172a;
+        border-bottom: 1px solid #1e293b;
     }
 
     body.dark .header__menu {
