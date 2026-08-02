@@ -1,8 +1,8 @@
 // Get Elements 
-const headerLogo   = document.querySelector('.header__logo');
-const headerMenu   = document.querySelector('.header__menu');
-const headerTheme  = document.querySelector('.header__util-btn--theme')
-const headerToggle = document.querySelector('.header__toggle-icon') 
+const headerLogo       = document.querySelector('.header__logo');
+const headerMenu       = document.querySelector('.header__menu');
+const headerTheme      = document.querySelector('.header__util-btn--theme')
+const headerToggle     = document.querySelector('.header__toggle-icon') 
 
 // Header logo configuration and rendering
 const logoData = {
@@ -15,7 +15,7 @@ const logoData = {
 headerLogo.insertAdjacentHTML('beforeend' , `<img src="${logoData.src}" class="${logoData.className}" alt="${logoData.alt}"/>`)
 
 // Db Menu
-let menuData = [
+const menuData = [
     {
         id: 1,
         title: 'Home',
@@ -86,6 +86,11 @@ menuData.forEach(data => {
 // Change Theme 
 headerTheme.addEventListener('click' , ()  => document.body.classList.toggle('dark'))
 
-headerToggle.addEventListener('click' , () => headerMenu.classList.toggle('d-flex'))
+headerToggle.addEventListener('click' , () => {
+    headerMenu.classList.toggle('d-flex')
+
+    headerToggle.classList.toggle('ri-menu-line');
+    headerToggle.classList.toggle('ri-close-line');
+})
 
 
