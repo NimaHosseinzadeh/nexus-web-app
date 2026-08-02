@@ -1,7 +1,18 @@
 // Get Elements 
+const headerLogo   = document.querySelector('.header__logo');
 const headerMenu   = document.querySelector('.header__menu');
 const headerTheme  = document.querySelector('.header__util-btn--theme')
 const headerToggle = document.querySelector('.header__toggle-icon') 
+
+// Header logo configuration and rendering
+const logoData = {
+    src : 'img/Logo.svg' ,
+    className : 'header__logo-img' ,
+    alt : 'Nexus Logo'
+}
+
+// Insert logo image into the DOM
+headerLogo.insertAdjacentHTML('beforeend' , `<img src="${logoData.src}" class="${logoData.className}" alt="${logoData.alt}"/>`)
 
 // Db Menu
 let menuData = [
@@ -76,3 +87,5 @@ menuData.forEach(data => {
 headerTheme.addEventListener('click' , ()  => document.body.classList.toggle('dark'))
 
 headerToggle.addEventListener('click' , () => headerMenu.classList.toggle('d-flex'))
+
+
